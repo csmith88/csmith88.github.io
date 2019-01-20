@@ -3,7 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <title>Szerdai kosar</title>
+
+    <!-- Firebase START -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCfYYugHqgY8BKGsYenehbUN2QLxOXKBzg",
+        authDomain: "wednesday-basketball.firebaseapp.com",
+        databaseURL: "https://wednesday-basketball.firebaseio.com",
+        projectId: "wednesday-basketball",
+        storageBucket: "",
+        messagingSenderId: "700617691605"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- Firebase END -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Login START -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+      $(function() {
+          $('#login-form-link').click(function(e) {
+          $("#login-form").delay(100).fadeIn(100);
+          $("#register-form").fadeOut(100);
+          $('#register-form-link').removeClass('active');
+          $(this).addClass('active');
+          e.preventDefault();
+        });
+        $('#register-form-link').click(function(e) {
+          $("#register-form").delay(100).fadeIn(100);
+          $("#login-form").fadeOut(100);
+          $('#login-form-link').removeClass('active');
+          $(this).addClass('active');
+          e.preventDefault();
+        });      
+      });
+    </script>
+    <!-- Login END -->
 
     <link href="style.css" rel="stylesheet">
   </head>
